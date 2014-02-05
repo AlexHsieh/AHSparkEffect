@@ -21,6 +21,10 @@
 		8B620E8518A239C300EF42B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B620E6718A239C300EF42B2 /* UIKit.framework */; };
 		8B620E8D18A239C300EF42B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B620E8B18A239C300EF42B2 /* InfoPlist.strings */; };
 		8B620E8F18A239C300EF42B2 /* SparkEffectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B620E8E18A239C300EF42B2 /* SparkEffectTests.m */; };
+		8B620E9B18A23A6200EF42B2 /* AHSparkEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B620E9A18A23A6200EF42B2 /* AHSparkEffect.m */; };
+		8B620E9D18A23F0400EF42B2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B620E9C18A23F0400EF42B2 /* QuartzCore.framework */; };
+		8B620EA018A23F3500EF42B2 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B620E9E18A23F3500EF42B2 /* spark.png */; };
+		8B620EA118A23F3500EF42B2 /* spark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B620E9F18A23F3500EF42B2 /* spark@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,11 @@
 		8B620E8A18A239C300EF42B2 /* SparkEffectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SparkEffectTests-Info.plist"; sourceTree = "<group>"; };
 		8B620E8C18A239C300EF42B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B620E8E18A239C300EF42B2 /* SparkEffectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SparkEffectTests.m; sourceTree = "<group>"; };
+		8B620E9918A23A6200EF42B2 /* AHSparkEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHSparkEffect.h; sourceTree = "<group>"; };
+		8B620E9A18A23A6200EF42B2 /* AHSparkEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHSparkEffect.m; sourceTree = "<group>"; };
+		8B620E9C18A23F0400EF42B2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8B620E9E18A23F3500EF42B2 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		8B620E9F18A23F3500EF42B2 /* spark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spark@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B620E9D18A23F0400EF42B2 /* QuartzCore.framework in Frameworks */,
 				8B620E6618A239C300EF42B2 /* CoreGraphics.framework in Frameworks */,
 				8B620E6818A239C300EF42B2 /* UIKit.framework in Frameworks */,
 				8B620E6418A239C300EF42B2 /* Foundation.framework in Frameworks */,
@@ -101,6 +111,7 @@
 		8B620E6218A239C300EF42B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B620E9C18A23F0400EF42B2 /* QuartzCore.framework */,
 				8B620E6318A239C300EF42B2 /* Foundation.framework */,
 				8B620E6518A239C300EF42B2 /* CoreGraphics.framework */,
 				8B620E6718A239C300EF42B2 /* UIKit.framework */,
@@ -112,6 +123,7 @@
 		8B620E6918A239C300EF42B2 /* SparkEffect */ = {
 			isa = PBXGroup;
 			children = (
+				8B620E9818A23A4100EF42B2 /* AHSparkEffect */,
 				8B620E7218A239C300EF42B2 /* AHSparkEffectAppDelegate.h */,
 				8B620E7318A239C300EF42B2 /* AHSparkEffectAppDelegate.m */,
 				8B620E7518A239C300EF42B2 /* Main.storyboard */,
@@ -150,6 +162,17 @@
 				8B620E8B18A239C300EF42B2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B620E9818A23A4100EF42B2 /* AHSparkEffect */ = {
+			isa = PBXGroup;
+			children = (
+				8B620E9E18A23F3500EF42B2 /* spark.png */,
+				8B620E9F18A23F3500EF42B2 /* spark@2x.png */,
+				8B620E9918A23A6200EF42B2 /* AHSparkEffect.h */,
+				8B620E9A18A23A6200EF42B2 /* AHSparkEffect.m */,
+			);
+			path = AHSparkEffect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +253,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B620E7C18A239C300EF42B2 /* Images.xcassets in Resources */,
+				8B620EA018A23F3500EF42B2 /* spark.png in Resources */,
 				8B620E6E18A239C300EF42B2 /* InfoPlist.strings in Resources */,
 				8B620E7718A239C300EF42B2 /* Main.storyboard in Resources */,
+				8B620EA118A23F3500EF42B2 /* spark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B620E7418A239C300EF42B2 /* AHSparkEffectAppDelegate.m in Sources */,
+				8B620E9B18A23A6200EF42B2 /* AHSparkEffect.m in Sources */,
 				8B620E7018A239C300EF42B2 /* main.m in Sources */,
 				8B620E7A18A239C300EF42B2 /* AHSparkEffectViewController.m in Sources */,
 			);
